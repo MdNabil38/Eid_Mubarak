@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(../image/wolfgang-hasselmann-syJoWqXsDGU-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+section{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: floating 4s linear infinite;
+    animation-direction: alternate;
+}
+section h1{
+    font-size: 150px;
+    color: #fff;
+    font-family: 'Tangerine', cursive;
+    position: relative;
+}
+section h1::before{
+    content: "";
+    position: absolute;
+    top: -190px;
+    left: -100px;
+    width: 200px;
+    height: 100px;
+    border-left: 15px solid #fff;
+    border-radius: 50px;
+    transform: rotate(-40deg);
+}
+@keyframes floating{
+    0%{
+        left: 49%;
+    }
+    25%{
+        top: 49%;
+    }
+    50%{
+        left: 50%;
+    }
+    75%{
+        top: 50%;
+    }
+    100%{
+        left: 49%;
+    }
+}
+.mosque{
+    background-image: url(../image/mosque.png);
+    min-height: 166px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 496px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    animation: moving 50s linear infinite;
+}
+.mosque::before{
+    content: "";
+    background-image: url(../image/mosque.png);
+    min-height: 301px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 770px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 30%;
+    animation: moving 50s linear infinite;
+    animation-direction: reverse;
+}    
+@keyframes moving{
+    0%{
+        background-position:0px ;
+    }
+    100%{
+        background-position: 1600px ;
+    }
+}
+.particles-js-canvas-el{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 80vh;
+}
